@@ -27,7 +27,7 @@ export default function HeroSplit({
   }
 
   return (
-    <section className="hero-split" id="main">
+    <section className="hero-split">
       <h1 className="sr-only">INTAMBWE Creative Space</h1>
 
       <div className="hero-split-media">

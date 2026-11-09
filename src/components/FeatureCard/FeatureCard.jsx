@@ -17,7 +17,7 @@ export default function FeatureCard({
   color,
   video,
   cta,
-  to = "#",
+  to,
   size = "half",
   playLabel,
   parallax = false,
@@ -91,8 +91,8 @@ export default function FeatureCard({
     if (el) el.style.opacity = "1";
   }, [reveal]);
 
-  return (
-    <Link to={to} className={cls.join(" ")} ref={ref}>
+  const content = (
+    <>
       {image && (
         <img className="feature-img" src={image} alt={title} loading="lazy" />
       )}
@@ -120,6 +120,16 @@ export default function FeatureCard({
           {playLabel || "Play video"}
         </span>
       )}
+    </>
+  );
+
+  return to ? (
+    <Link to={to} className={cls.join(" ")} ref={ref}>
+      {content}
     </Link>
+  ) : (
+    <article className={cls.join(" ")} ref={ref}>
+      {content}
+    </article>
   );
 }

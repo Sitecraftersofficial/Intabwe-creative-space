@@ -1,8 +1,10 @@
-import { useRef, useState, useEffect, useCallback } from "react";
+import { useId, useRef, useState, useEffect, useCallback } from "react";
+import { Link } from "react-router-dom";
 import "./Carousel.css";
 
 /** Horizontal scroll-snap card row with arrow controls (IKEA-style carousel). */
 export default function Carousel({ title, description, items, dark = false }) {
+  const trackId = `carousel-track-${useId()}`;
   const trackRef = useRef(null);
   const [canPrev, setCanPrev] = useState(false);
   const [canNext, setCanNext] = useState(true);
@@ -64,24 +66,36 @@ export default function Carousel({ title, description, items, dark = false }) {
       </div>
       <div className="carousel-track-wrap">
         <div className="container">
-          <a href="#" className="carousel-skip">
+          <a href={`#${trackId}`} className="carousel-skip">
             Skip carousel
           </a>
         </div>
-        <div className="carousel-track container" ref={trackRef}>
-          {items.map((item) => (
-            <a key={item.title} href="#" className="carousel-card">
-              <div className="carousel-card-media">
-                <img src={item.image} alt={item.title} loading="lazy" />
-              </div>
-              <div className="carousel-card-text">
-                <p className="carousel-card-eyebrow">
-                  {item.eyebrow || item.name}
-                </p>
-                <h3 className="carousel-card-title">{item.title}</h3>
-              </div>
-            </a>
-          ))}
+        <div id={trackId} className="carousel-track container" ref={trackRef}>
+          {items.map((item) => {
+            const content = (
+              <>
+                <div className="carousel-card-media">
+                  <img src={item.image} alt={item.title} loading="lazy" />
+                </div>
+                <div className="carousel-card-text">
+                  <p className="carousel-card-eyebrow">
+                    {item.eyebrow || item.name}
+                  </p>
+                  <h3 className="carousel-card-title">{item.title}</h3>
+                </div>
+              </>
+            );
+
+            return item.to ? (
+              <Link key={item.title} to={item.to} className="carousel-card">
+                {content}
+              </Link>
+            ) : (
+              <article key={item.title} className="carousel-card">
+                {content}
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

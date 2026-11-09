@@ -5,9 +5,9 @@ import "./StoryCard.css";
  * IKEA-style story card: image on top, eyebrow + title + arrow CTA below.
  * Uniform size — the whole grid is equal columns/rows (like ikea.com).
  */
-export function Tile({ eyebrow, title, image, video, cta, to = "#" }) {
-  return (
-    <Link to={to} className="tile">
+export function Tile({ eyebrow, title, image, video, cta, to }) {
+  const content = (
+    <>
       <span className="tile-media">
         <img
           className="tile-img"
@@ -32,7 +32,15 @@ export function Tile({ eyebrow, title, image, video, cta, to = "#" }) {
           </span>
         )}
       </span>
+    </>
+  );
+
+  return to ? (
+    <Link to={to} className="tile">
+      {content}
     </Link>
+  ) : (
+    <article className="tile">{content}</article>
   );
 }
 
