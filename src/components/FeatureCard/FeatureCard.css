@@ -1,0 +1,226 @@
+.feature {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  min-height: 20rem;
+  isolation: isolate;
+  color: var(--color-light);
+}
+
+.feature--tall {
+  min-height: 26rem;
+}
+.feature--full {
+  min-height: clamp(24rem, 52vh, 34rem);
+}
+.feature--half-v {
+  min-height: 24rem;
+}
+
+/* Scroll-in reveal: fade + rise when entering viewport */
+.feature--reveal {
+  opacity: 0;
+  transform: translate3d(0, 4rem, 0) scale(0.94);
+  will-change: opacity, transform;
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+.feature--reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+.feature--reveal.is-visible:hover,
+.feature--reveal.is-visible:focus-visible {
+  transform: translate3d(0, -0.375rem, 0) scale(1);
+}
+
+.feature--reveal .feature-img {
+  transform: scale(1.06);
+  transition: transform 1s cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+.feature--reveal.is-visible .feature-img {
+  transform: scale(1);
+}
+
+.feature--reveal .feature-text {
+  opacity: 0;
+  transform: translateY(1.25rem);
+  transition:
+    opacity 0.6s ease 0.12s,
+    transform 0.7s cubic-bezier(0.2, 0.75, 0.25, 1) 0.12s;
+}
+.feature--reveal.is-visible .feature-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feature--reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .feature--reveal .feature-img,
+  .feature--reveal .feature-text {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.feature-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+.feature:hover .feature-img {
+  transform: scale(1.035);
+}
+
+.feature--color .feature-img {
+  position: absolute;
+  inset: 0;
+}
+
+.feature-color {
+  position: absolute;
+  inset: 0;
+}
+
+/* bottom gradient for legibility */
+.feature-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.22) 38%,
+    rgba(0, 0, 0, 0) 65%
+  );
+}
+.feature--color .feature-scrim {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.05) 45%,
+    rgba(0, 0, 0, 0) 70%
+  );
+}
+
+.feature-text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  padding: 1.75rem;
+  max-width: 30rem;
+}
+
+.feature-eyebrow {
+  font-size: 0.875rem;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+.feature-title {
+  font-size: 1.625rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.feature--full .feature-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  max-width: 34rem;
+}
+
+.feature-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.625rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+.feature:hover .feature-cta,
+.feature:focus-visible .feature-cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature-cta-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--color-brand-yellow);
+  color: var(--color-text-black);
+  font-size: 0.6875rem;
+  transition: transform 0.15s ease;
+}
+.feature:hover .feature-cta-arrow {
+  transform: translateX(3px);
+}
+
+.feature-play {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem 0.4rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.feature-play-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: var(--color-light);
+  color: var(--color-text-black);
+  font-size: 0.5625rem;
+}
+
+@media (hover: none) {
+  .feature-cta {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feature,
+  .feature-img,
+  .feature-cta,
+  .feature-cta-arrow {
+    transition: none !important;
+  }
+  .feature-cta {
+    opacity: 1;
+    transform: none;
+  }
+  .feature--reveal.is-visible:hover,
+  .feature--reveal.is-visible:focus-visible {
+    transform: none;
+  }
+}

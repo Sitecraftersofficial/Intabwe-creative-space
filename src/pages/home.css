@@ -1,0 +1,48 @@
+/* padding, not margin — .container sets `margin: 0 auto`, which would
+   otherwise collapse the spacing between rows */
+.home-row {
+  padding-bottom: clamp(1.75rem, 3.5vw, 3rem);
+}
+.home-row:first-of-type {
+  padding-top: var(--vertical-spacing-mobile);
+}
+
+.home-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.home-trio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  align-items: stretch;
+}
+
+.home-trio > .feature--tall {
+  height: 100%;
+}
+
+.home-stack {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+.home-stack .feature {
+  min-height: 0;
+  height: 100%;
+}
+
+@media (max-width: 900px) {
+  .home-duo,
+  .home-trio {
+    grid-template-columns: 1fr;
+  }
+  .home-stack {
+    grid-template-rows: none;
+  }
+  .home-stack .feature {
+    min-height: 20rem;
+  }
+}

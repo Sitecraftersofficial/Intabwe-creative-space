@@ -1,0 +1,38 @@
+.account-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.account-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background: var(--color-light);
+}
+
+.account-card-num {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.account-card-label {
+  font-size: 0.75rem;
+  color: var(--color-text-dark);
+}
+
+.account-card-link {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-brand-blue);
+  margin-top: 0.5rem;
+}
+
+.account-actions {
+  display: flex;
+  gap: 0.75rem;
+}

@@ -1,0 +1,118 @@
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--grid-gap);
+}
+
+.tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-light);
+  border-radius: var(--radius);
+  overflow: hidden;
+  color: var(--color-text-darker);
+  isolation: isolate;
+}
+
+.tile-img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.tile:hover .tile-img {
+  transform: scale(1.03);
+}
+
+/* play badge anchored over the image area */
+.tile-media {
+  position: relative;
+  overflow: hidden;
+}
+
+.tile-scrim {
+  display: none;
+}
+
+.tile-text {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem 1rem 1.25rem;
+}
+
+.tile-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.tile-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.tile--wide .tile-title,
+.tile--tall .tile-title {
+  font-size: 1.0625rem;
+  max-width: none;
+}
+
+.tile-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-text-darker);
+}
+
+.tile-cta-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background: var(--color-brand-yellow);
+  color: var(--color-text-black);
+  font-size: 0.625rem;
+  transition: transform 0.15s ease;
+}
+.tile:hover .tile-cta-arrow {
+  transform: translateX(3px);
+}
+
+.tile-play {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem 0.35rem 0.45rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--color-light);
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 1024px) {
+  .tile-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: single column */
+@media (max-width: 640px) {
+  .tile-grid {
+    grid-template-columns: 1fr;
+  }
+}

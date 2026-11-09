@@ -1,0 +1,150 @@
+.ab-manifesto {
+  margin-top: 2rem;
+}
+
+.ab-story {
+  margin-top: var(--grid-gap);
+  margin-bottom: var(--vertical-spacing-mobile);
+}
+
+.ab-story-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+.ab-story-grid .reveal,
+.ab-story-grid .tilt-card {
+  height: 100%;
+}
+.ab-story-grid .feature {
+  min-height: 20rem;
+  height: 100%;
+}
+
+/* Vision / mission */
+.ab-big-block {
+  background: var(--color-light);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  height: 100%;
+}
+.ab-big-block h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.ab-big-block p {
+  margin: 0;
+  color: var(--color-text-dark);
+  line-height: 1.7;
+  max-width: none;
+}
+
+/* Values */
+.ab-values {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  margin-top: 1.5rem;
+}
+.ab-values .reveal,
+.ab-value-outer {
+  height: 100%;
+}
+
+.ab-value-card {
+  height: 100%;
+  background: var(--color-light);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.ab-value-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-grey-dark);
+  letter-spacing: 0.1em;
+}
+
+.ab-value-card h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.ab-value-card p {
+  font-size: 0.8125rem;
+  color: var(--color-text-dark);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Process rail */
+.ab-process {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem var(--grid-gap);
+  margin: 0;
+  padding: 0;
+}
+.ab-process li {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.ab-process-rail {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  height: 3px;
+  width: 3.5rem;
+  background: var(--color-brand-yellow);
+  border-radius: 999px;
+}
+
+/* Industries */
+.ab-industries {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  margin-top: 1.5rem;
+}
+.ab-industries .reveal,
+.ab-industries .feature {
+  height: 100%;
+  min-height: 0;
+}
+.ab-industries .feature {
+  min-height: 15rem;
+}
+
+@media (max-width: 1024px) {
+  .ab-story-grid,
+  .ab-values,
+  .ab-industries {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .ab-story-grid,
+  .ab-values,
+  .ab-industries {
+    grid-template-columns: 1fr;
+  }
+  .ab-story-grid .feature,
+  .ab-industries .feature {
+    min-height: 16rem;
+  }
+  .ab-process {
+    grid-template-columns: 1fr;
+  }
+}

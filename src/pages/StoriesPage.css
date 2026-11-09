@@ -1,0 +1,39 @@
+.stories-page {
+  padding-bottom: 4rem;
+}
+
+.stories-featured {
+  margin-top: calc(-1 * var(--vertical-spacing-mobile) / 2);
+}
+
+.stories-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 2rem 0 1.5rem;
+}
+
+.stories-grid-wrap {
+  margin-top: 0.5rem;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--grid-gap);
+}
+.stories-grid .feature {
+  min-height: 22rem;
+}
+
+.stories-empty {
+  color: var(--color-text-dark);
+  font-size: 0.9375rem;
+  padding: 2rem 0;
+}
+
+@media (max-width: 700px) {
+  .stories-grid {
+    grid-template-columns: 1fr;
+  }
+}
