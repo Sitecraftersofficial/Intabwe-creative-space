@@ -13,7 +13,7 @@ import "./company.css";
 import "./projects.css";
 
 const IMAGES = [img1, img2, img9, img6, img7, img5];
-const COLORS = ["#111", "#0058a3", "#484848", "#0a8a00", "#b5490c", "#111"];
+const COLORS = ["#111", "#0058a3", "#222222", "#0058a3", "#111111", "#111"];
 
 /* Filmstrip: horizontal gallery the user drags/scrolls through */
 function Filmstrip({ active, onPick }) {

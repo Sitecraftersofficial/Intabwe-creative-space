@@ -24,15 +24,21 @@
   --grid-gap: 1.5rem;
   --grid-gap-mobile: 1rem;
   --radius: 0.5rem;
-  --color-logo: #fae6e6;
-  --color-off-white: #fffefb;
-  --color-border: #f0ede8;
-  --color-footer: #806e6e;
+  --color-logo: #ffffff;
+  --color-off-white: #ffffff;
+  --color-border: #e2e8f0;
+  --color-footer: #111111;
   --color-light: #fff;
+  /* Brand palette: white, blue (#0058A3 from the logo), black */
   --color-brand-blue: #0058a3;
-  --color-brand-yellow: #ffdb00;
-  --color-brand-yellow-hover: #ffe53a;
-  --color-brand-yellow-light: #fff094;
+  --color-accent: #0058a3;
+  --color-accent-hover: #00437c;
+  --color-accent-light: #e3eef7;
+  /* legacy aliases — yellow usages now map to the blue accent */
+  --color-brand-yellow: #0058a3;
+  --color-brand-yellow-hover: #00437c;
+  --color-brand-yellow-light: #e3eef7;
+  --color-brand-on-dark: #9cc8e8;
   --color-text-dark: rgba(0, 0, 0, 0.75);
   --color-text-darker: #111;
   --color-text-black: #000;
@@ -100,8 +106,8 @@ video {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--color-brand-yellow);
-  color: var(--color-text-black);
+  background: var(--color-brand-blue);
+  color: #fff;
   font-weight: 700;
   padding: 0.75rem 1.5rem;
   border-radius: var(--radius);

@@ -12,7 +12,7 @@ import "./company.css";
 import "./services.css";
 
 const IMAGES = [img1, img2, img6, img7, img9, img10, img5, img2];
-const COLORS = ["#0058a3", "#0a8a00", "#484848", "#b5490c", "#0058a3", "#0a8a00", "#484848", "#111"];
+const COLORS = ["#0058a3", "#111111", "#3a6fa5", "#111111", "#0058a3", "#222222", "#3a6fa5", "#111"];
 
 export default function ServicesPage() {
   return (

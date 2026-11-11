@@ -43,7 +43,7 @@
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-brand-yellow);
+  color: var(--color-brand-on-dark);
 }
 
 .auth-hero-overlay h2 {

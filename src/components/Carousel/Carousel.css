@@ -8,7 +8,7 @@
   color: var(--color-light);
 }
 .carousel-section--dark .carousel-card-eyebrow {
-  color: var(--color-brand-yellow);
+  color: #9cc8e8;
 }
 
 .carousel-head {
@@ -54,8 +54,8 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  background: var(--color-brand-yellow);
-  color: var(--color-text-black);
+  background: var(--color-brand-blue);
+  color: #fff;
   font-size: 1.125rem;
   display: flex;
   align-items: center;

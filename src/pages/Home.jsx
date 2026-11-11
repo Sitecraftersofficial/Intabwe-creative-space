@@ -88,7 +88,7 @@ const row3c = {
 
 /* Green banner with white mini-cards */
 const banner1 = {
-  color: "#0a8a00",
+  color: "#0058a3",
   title: "OUR CREATIVE ECOSYSTEM",
   description:
     "Intambwe Creative Space operates across several interconnected creative disciplines.",

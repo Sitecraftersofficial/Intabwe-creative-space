@@ -23,12 +23,11 @@ export default function Header() {
       </a>
       <div className="header-inner container">
         <Link to="/" className="header-logo" aria-label="INTAMBWE home">
-          <img
-            src={logo}
-            alt="INTAMBWE Creative Space"
-            width="130"
-            height="65"
-          />
+          <img src={logo} alt="" width="44" height="44" />
+          <span className="header-wordmark">
+            <span className="header-wordmark-main">INTAMBWE</span>
+            <span className="header-wordmark-sub">Creative Space</span>
+          </span>
         </Link>
 
         <nav className="header-nav" aria-label="Main navigation">

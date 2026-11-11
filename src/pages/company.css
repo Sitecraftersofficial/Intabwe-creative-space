@@ -88,7 +88,7 @@
 .co-process-num {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--color-brand-yellow);
+  color: var(--color-brand-on-dark);
   line-height: 1;
 }
 .co-process h3 {
@@ -103,8 +103,8 @@
 
 /* Yellow promise block (styles self-contained — used on About) */
 .home-section--yellow {
-  background: var(--color-brand-yellow);
-  color: var(--color-text-black);
+  background: var(--color-brand-blue);
+  color: #fff;
 }
 .home-section--yellow .home-section-head p {
   color: rgba(0, 0, 0, 0.7);

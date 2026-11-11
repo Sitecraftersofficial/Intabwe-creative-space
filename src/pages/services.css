@@ -164,7 +164,7 @@
 .svc-chapter-flow {
   font-size: 0.8125rem;
   font-weight: 700;
-  color: var(--color-brand-yellow);
+  color: var(--color-brand-on-dark);
   letter-spacing: 0.02em;
   margin-bottom: 1.5rem;
 }
@@ -173,8 +173,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.625rem;
-  background: var(--color-brand-yellow);
-  color: var(--color-text-black);
+  background: var(--color-brand-blue);
+  color: #fff;
   font-weight: 700;
   font-size: 0.875rem;
   padding: 0.75rem 1.5rem;

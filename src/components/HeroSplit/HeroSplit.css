@@ -111,9 +111,9 @@
   font-size: 0.75rem;
 }
 
-/* Right: solid brand-yellow panel — the whole panel IS the link/button */
+/* Right: solid brand-blue panel — the whole panel IS the link/button */
 .hero-split-panel {
-  background: var(--color-brand-yellow);
+  background: var(--color-brand-blue);
   display: flex;
   align-items: stretch;
   justify-content: stretch;
@@ -157,7 +157,7 @@
   justify-content: space-between;
   gap: 1rem;
   padding: 0.55rem 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
   font-size: clamp(0.9rem, 1.25vw, 1.125rem);
   font-weight: 700;
   transition:
@@ -166,7 +166,7 @@
 }
 
 .hero-panel-category:last-child {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .hero-panel-category span {
@@ -180,7 +180,7 @@
 .hero-panel-category:hover,
 .hero-panel-category:focus-visible {
   padding-left: 0.4rem;
-  color: var(--color-brand-blue);
+  color: #9cc8e8;
 }
 
 .hero-panel-category:hover span,
@@ -213,6 +213,12 @@
   transform: translateY(-2px);
 }
 
+.hero-panel-shop:hover .hero-panel-arrow,
+.hero-panel-shop:focus-visible .hero-panel-arrow {
+  background: #fff;
+  color: var(--color-brand-blue);
+}
+
 .hero-panel-shop .hero-panel-arrow {
   display: inline-flex;
   align-items: center;
@@ -221,8 +227,8 @@
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 50%;
-  background: var(--color-brand-yellow);
-  color: var(--color-text-black);
+  background: var(--color-brand-blue);
+  color: #fff;
 }
 
 .hero-panel-arrow {

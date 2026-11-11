@@ -46,7 +46,7 @@
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-brand-yellow);
+  color: var(--color-brand-on-dark);
   margin-bottom: 0.75rem;
 }
 
@@ -91,8 +91,8 @@
   width: 1.75rem;
   height: 1.75rem;
   border-radius: 50%;
-  background: var(--color-brand-yellow);
-  color: var(--color-text-black);
+  background: var(--color-brand-blue);
+  color: #fff;
   font-size: 0.75rem;
   flex-shrink: 0;
   transition: transform 0.15s ease;

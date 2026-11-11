@@ -16,8 +16,8 @@
   background: #111;
 }
 .page-hero--yellow {
-  background: var(--color-brand-yellow);
-  color: var(--color-text-black);
+  background: var(--color-brand-blue);
+  color: #fff;
 }
 
 .page-eyebrow {
@@ -33,7 +33,7 @@
 }
 .page-hero--blue .page-eyebrow,
 .page-hero--dark .page-eyebrow {
-  color: var(--color-brand-yellow);
+  color: var(--color-brand-on-dark);
 }
 
 .page-hero h1 {
@@ -118,7 +118,7 @@
 }
 .news-tag {
   background: var(--color-brand-yellow-light);
-  color: var(--color-text-darker);
+  color: var(--color-brand-blue);
   font-size: 0.6875rem;
   font-weight: 700;
   text-transform: uppercase;

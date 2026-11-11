@@ -52,7 +52,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--color-brand-yellow);
+  color: var(--color-brand-on-dark);
   margin-bottom: 0.75rem;
 }
 
@@ -166,7 +166,7 @@
 }
 .film-card.is-active {
   opacity: 1;
-  border-color: var(--color-brand-yellow);
+  border-color: var(--color-brand-on-dark);
 }
 .film-card img {
   width: 100%;
@@ -236,7 +236,7 @@
   grid-column: span 5;
 }
 .pj-mosaic-item.is-active {
-  border-color: var(--color-brand-yellow);
+  border-color: var(--color-brand-on-dark);
 }
 
 .pj-mosaic-item img {
@@ -271,7 +271,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-brand-yellow);
+  color: var(--color-brand-on-dark);
 }
 .pj-mosaic-title {
   font-size: 1.25rem;
@@ -286,8 +286,8 @@
   height: 2rem;
   margin-top: 0.25rem;
   border-radius: 50%;
-  background: var(--color-brand-yellow);
-  color: var(--color-text-black);
+  background: var(--color-brand-blue);
+  color: #fff;
   opacity: 0;
   transform: translateY(0.5rem);
   transition:
