@@ -229,6 +229,9 @@
 .pj-mosaic-item--large {
   grid-column: span 7;
 }
+.pj-mosaic-item--mid {
+  grid-column: span 6;
+}
 .pj-mosaic-item--small {
   grid-column: span 5;
 }

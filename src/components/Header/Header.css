@@ -10,16 +10,20 @@
   display: flex;
   align-items: center;
   gap: clamp(0.75rem, 2vw, 1.5rem);
-  height: 4rem;
+  height: 4.5rem;
 }
 
 .header-logo {
   flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
 }
 
+/* square-ish JPEG logo: match the mark's natural ratio, slightly taller header */
 .header-logo img {
-  height: 2.25rem;
+  height: 3.25rem;
   width: auto;
+  object-fit: contain;
 }
 
 .header-nav {

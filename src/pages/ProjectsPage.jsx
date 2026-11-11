@@ -142,7 +142,21 @@ export default function ProjectsPage() {
               as="button"
               type="button"
               id={pr.id}
-              className={`pj-mosaic-item ${i === active ? "is-active" : ""} ${i === 0 ? "pj-mosaic-item--full" : ""} ${i === 1 ? "pj-mosaic-item--large" : ""} ${i === 2 ? "pj-mosaic-item--small" : ""}`}
+              className={`pj-mosaic-item ${
+                i === active ? "is-active" : ""
+              } ${
+                i === 0
+                  ? "pj-mosaic-item--full"
+                  : i === 1
+                    ? "pj-mosaic-item--large"
+                    : i === 2
+                      ? "pj-mosaic-item--small"
+                      : i === 3
+                        ? "pj-mosaic-item--small"
+                        : i === 4
+                          ? "pj-mosaic-item--mid"
+                          : "pj-mosaic-item--small"
+              }`}
               delay={i * 70}
               onClick={() => {
                 setActive(i);

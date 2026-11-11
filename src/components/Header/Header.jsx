@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { CONTACT, DISCIPLINES } from "../../data/company";
-import logo from "../../assets/logos/intambwe.svg";
+import logo from "../../assets/logos/intambwelogo.jpeg";
 import "./Header.css";
 
 const NAV_ITEMS = [
@@ -26,8 +26,8 @@ export default function Header() {
           <img
             src={logo}
             alt="INTAMBWE Creative Space"
-            width="150"
-            height="29"
+            width="130"
+            height="65"
           />
         </Link>
 
